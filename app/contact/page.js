@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 
 
-const page = () => {
+const Page = () => {
     const [fullname, setFullname] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
@@ -52,7 +52,7 @@ const page = () => {
             <div className="grid lg:grid-cols-2 items-center gap-14 sm:p-8 p-4 font-[sans-serif]">
                 <div>
                     <h1 className="text-4xl font-bold text-white">Get in Touch</h1>
-                    <p className="text-sm text-gray-300 mt-4 leading-relaxed">Have some big idea or brand to develop and need help? Then reach out we'd love to hear about your project  and provide help.</p>
+                    <p className="text-sm text-gray-300 mt-4 leading-relaxed">Have some big idea or brand to develop and need help? Then reach out we&apos;d love to hear about your project  and provide help</p>
 
                     <ul className="mt-12 space-y-8">
                         <li className="flex items-center">
@@ -120,7 +120,7 @@ const page = () => {
                 </div>
 
                 <div className="bg-gray-100 p-6 rounded-lg">
-                    <p className="text-sm font-semibold text-gray-800">I'm interested in...</p>
+                    <p className="text-sm font-semibold text-gray-800">I&apos;m interested in...</p>
 
                     <div className="space-y-4 max-lg:mt-4">
                         <button onClick={() => handleClick("basic")}
@@ -210,4 +210,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

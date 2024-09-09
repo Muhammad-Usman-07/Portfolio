@@ -1,6 +1,7 @@
 "use client";
 import { useEffect } from "react";
 import { useRouter } from 'next/navigation';
+import Image from "next/image";
 
 export default function Home() {
   const router = useRouter();
@@ -90,10 +91,10 @@ export default function Home() {
           Muhammad Usman
         </div>
         <div className="text-white text-lg sm:text-base md:text-lg">
-          "A passionate MERN stack developer"
+          A passionate MERN stack developer
         </div>
-        <div className="text-white text-sm sm:text-base md:text-lg md:w-1/2">
-          'Turning your digital dreams into engaging and dynamic web realities'
+        <div className="text-white text-xs sm:text-base md:text-lg md:w-1/2">
+          Turning your digital dreams into engaging and dynamic web realities
         </div>
       </div>
 
