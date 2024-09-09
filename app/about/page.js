@@ -2,7 +2,6 @@
 import React from 'react';
 
 const Page = () => {
-
     // Function to handle resume download
     const handleDownload = () => {
         const link = document.createElement('a');
@@ -12,13 +11,14 @@ const Page = () => {
         link.click();
         document.body.removeChild(link);
     };
+
     return (
         // <!-- === About section start ===  -->
         <section className="about section" id="about">
-            <div className="container mx-auto px-4  pb-16">
+            <div className="container mx-auto px-4 pb-16">
                 <div className="row">
                     <div className="section-title pb-6">
-                        <h2 className="text-3xl  font-bold text-white pt-9">About me:</h2>
+                        <h2 className="text-3xl font-bold text-white pt-9">About me:</h2>
                     </div>
                 </div>
                 <div className="row">
@@ -26,23 +26,23 @@ const Page = () => {
                         <div className="row">
                             <div className="about-text w-full">
                                 <h3 className="text-2xl text-white mb-4">
-                                    I'm Muhammad Usman & <span className="text-blue-500">Web Developer</span>
+                                    I&apos;m Muhammad Usman & <span className="text-blue-500">Web Developer</span>
                                 </h3>
-                                <p className="text-white leading-6 text-justify  text-base">
-                                    Hi, I'm Muhammad Usman! I'm a skilled full stack developer with a passion for building innovative web applications. With expertise in both Front-end and Back-end development, I can take a project from concept to completion
+                                <p className="text-white leading-6 text-justify text-base">
+                                    Hi, I&apos;m Muhammad Usman! I&apos;m a skilled full stack developer with a passion for building innovative web applications. With expertise in both Front-end and Back-end development, I can take a project from concept to completion.
                                     My tech stack:
-                                    1.MERN (MongoDB, Express, React, Node.js)
-                                    2.HTML, CSS, JavaScript
-                                    3.Responsive web design
-                                    4.Database management
+                                    1. MERN (MongoDB, Express, React, Node.js)
+                                    2. HTML, CSS, JavaScript
+                                    3. Responsive web design
+                                    4. Database management
                                     What I do:
                                     - Design and develop scalable web applications
                                     - Create responsive and user-friendly interfaces
                                     - Write clean, efficient, and well-documented code
                                     - Collaborate with teams to deliver high-quality projects
                                     Feel free to reach out if you need a skilled full stack developer or want to chat about web development!
-                                    I believe in constant learning and keeping up with the latest trends to create new projects
-                                    My goal is to craft web experiences that not only look good but also make users' lives easier. I'm excited about new challenges and opportunities in the frontend & backend world and eager to contribute my skills to innovative projects!
+                                    I believe in constant learning and keeping up with the latest trends to create new projects.
+                                    My goal is to craft web experiences that not only look good but also make users&apos; lives easier. I&apos;m excited about new challenges and opportunities in the frontend & backend world and eager to contribute my skills to innovative projects!
                                 </p>
                             </div>
                         </div>
@@ -109,10 +109,10 @@ const Page = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className=' text-white  pt-6 text-3xl  sm:hidden  md:hidden'>
+                            <div className=' text-white pt-6 text-3xl sm:hidden md:hidden'>
                                 Skills :
                             </div>
-                            <div className="skills w-full lg:w-2/5  mt-5 lg:mt-0">
+                            <div className="skills w-full lg:w-2/5 mt-5 lg:mt-0">
                                 <div className="row">
                                     <div className="skill-item w-full mb-6">
                                         <h5 className="text-base font-semibold text-white capitalize mb-2">HTML/CSS/TailwindCSS</h5>
