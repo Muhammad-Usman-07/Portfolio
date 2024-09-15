@@ -122,7 +122,7 @@ export default function Home() {
       {/* Heading for Latest Project */}
       <div className="flex justify-center items-center">
         <h2 className="text-2xl border-b-2 sm:text-3xl md:text-4xl font-normal text-center text-white dark:text-white mt-0 mb-0 sm:mt-1 sm:mb-1 md:mb-3">
-          My Latest Project
+          My Latest Project new
         </h2>
       </div>
 
