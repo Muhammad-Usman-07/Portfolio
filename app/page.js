@@ -20,63 +20,7 @@ export default function Home() {
     document.body.removeChild(link);
   };
 
-  useEffect(() => {
-    // Initialize the carousel
-    const initCarousel = () => {
-      const items = document.querySelectorAll("[data-carousel-item]");
-      const prevBtn = document.querySelector("[data-carousel-prev]");
-      const nextBtn = document.querySelector("[data-carousel-next]");
 
-      let currentIndex = 0;
-      const slideInterval = 3000; // Auto-slide interval in milliseconds
-      let intervalId;
-
-      const showItem = (index) => {
-        items.forEach((item, i) => {
-          item.classList.toggle("hidden", i !== index);
-        });
-      };
-
-      const nextSlide = () => {
-        currentIndex = (currentIndex + 1) % items.length;
-        showItem(currentIndex);
-      };
-
-      const prevSlide = () => {
-        currentIndex = (currentIndex - 1 + items.length) % items.length;
-        showItem(currentIndex);
-      };
-
-      const startAutoSlide = () => {
-        intervalId = setInterval(nextSlide, slideInterval);
-      };
-
-      const stopAutoSlide = () => {
-        clearInterval(intervalId);
-      };
-
-      prevBtn.addEventListener("click", () => {
-        stopAutoSlide();
-        prevSlide();
-        startAutoSlide();
-      });
-
-      nextBtn.addEventListener("click", () => {
-        stopAutoSlide();
-        nextSlide();
-        startAutoSlide();
-      });
-
-      // Initial setup
-      showItem(currentIndex);
-      startAutoSlide();
-
-      // Cleanup on unmount
-      return () => stopAutoSlide();
-    };
-
-    initCarousel();
-  }, []);
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -121,54 +65,141 @@ export default function Home() {
 
       {/* Heading for Latest Project */}
       <div className="flex justify-center items-center">
-        <h2 className="text-2xl border-b-2 sm:text-3xl md:text-4xl font-normal text-center text-white dark:text-white mt-0 mb-0 sm:mt-1 sm:mb-1 md:mb-3">
-          My Latest Project new
+        <h2 className="text-2xl  sm:text-3xl md:text-4xl font-bold text-center text-white  dark:text-white mt-0 mb-0 sm:mt-1 sm:mb-1 md:mb-3">
+          My Latest Project&apos;s
         </h2>
       </div>
 
-      <div id="custom-controls-gallery" className="relative w-full p-2 " data-carousel="slide">
-        {/* Carousel wrapper */}
-        <div className="relative h-64 sm:h-72 md:h-96 overflow-hidden w-full my-0">
-          {/* Item 1 */}
-          <div className="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="project1.png" className="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Item 1" />
+
+      <div className=" flex flex-wrap justify-center items-center p-1">
+
+        {/* card no 1 */}
+        <div className="w-full sm:w-1/2 lg:w-1/3 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-3">
+
+          <a href="#">
+            <img className="rounded-t-lg p-2" src="project1.png" alt="" />
+          </a>
+          <div className="p-5">
+            <a href="#">
+              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Password Manager</h5>
+            </a>
+            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Developed a password manager using React to securely store edit and delete passwords</p>
+            <div className="skill-item w-full mb-6">
+              <h5 className="text-base font-semibold text-black capitalize mb-2">TailwindCSS</h5>
+              <div className="progress bg-gray-200 h-2 rounded relative">
+                <div className="progress-in bg-blue-500 h-full rounded" style={{ width: '96%' }}></div>
+                <div className="skill-percent text-black absolute right-0 font-bold top-[-30px]">96%</div>
+              </div>
+            </div>
+            <div className="skill-item w-full mb-6">
+              <h5 className="text-base font-semibold text-black capitalize mb-2">JavaScript React</h5>
+              <div className="progress bg-gray-200 h-2 rounded relative">
+                <div className="progress-in bg-blue-500 h-full rounded" style={{ width: '86%' }}></div>
+                <div className="skill-percent text-black absolute right-0 font-bold top-[-30px]">70%</div>
+              </div>
+            </div>
+            <div className="skill-item w-full mb-6">
+              <h5 className="text-base font-semibold text-black capitalize mb-2">MongoDb</h5>
+              <div className="progress bg-gray-200 h-2 rounded relative">
+                <div className="progress-in bg-blue-500 h-full rounded" style={{ width: '66%' }}></div>
+                <div className="skill-percent text-black absolute right-0 font-bold top-[-30px]">50%</div>
+              </div>
+            </div>
+
+            <a href="https://www.linkedin.com/posts/m-usman-89068b294_passwordmanager-reactapp-tailwindcss-activity-7216015509769621504-mmh8?utm_source=share&utm_medium=member_android"
+              className="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2 text-center me-2 mb-2">
+              READ MORE
+            </a>
           </div>
-          {/* Item 2 */}
-          <div className="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="project2.png" className="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Item 2" />
-          </div>
-          {/* Item 3 */}
-          <div className="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="project3.png" className="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Item 3" />
-          </div>
-          {/* Item 4 */}
-          <div className="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="project4.png" className="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Item 4" />
-          </div>
-          {/* Item 5 */}
-          <div className="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="project3.png" className="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Item 5" />
-          </div>
+
         </div>
-        <div className="flex justify-center items-center  ">
-          <button type="button" className="flex justify-center items-center me-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev>
-            <span className="text-gray-400 hover:text-gray-900 dark:hover:text-white group-focus:text-gray-900 dark:group-focus:text-white">
-              <svg className="rtl:rotate-180 w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 5H1m0 0 4 4M1 5l4-4" />
-              </svg>
-              <span className="sr-only">Previous</span>
-            </span>
-          </button>
-          <button type="button" className="flex justify-center items-center h-full cursor-pointer group focus:outline-none" data-carousel-next>
-            <span className="text-gray-400 hover:text-gray-900 dark:hover:text-white group-focus:text-gray-900 dark:group-focus:text-white">
-              <svg className="rtl:rotate-180 w-5 h-5" aria-hidden="true" xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-              </svg>
-              <span className="sr-only">Next</span>
-            </span>
-          </button>
+
+        {/* card no 2 */}
+        <div className="w-full sm:w-1/2 lg:w-1/3 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-3">
+
+          <a href="#">
+            <img className="rounded-t-lg p-1" src="project2.png" alt="" />
+          </a>
+          <div className="p-5">
+            <a href="#">
+              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Fundiing App</h5>
+            </a>
+            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Developed a funding app using Next Js MongoDB and Express to process payments from users</p>
+            <div className="skill-item w-full mb-6">
+              <h5 className="text-base font-semibold text-black capitalize mb-2">TailwindCSS</h5>
+              <div className="progress bg-gray-200 h-2 rounded relative">
+                <div className="progress-in bg-blue-500 h-full rounded" style={{ width: '98%' }}></div>
+                <div className="skill-percent text-black absolute right-0 font-bold top-[-30px]">98%</div>
+              </div>
+            </div>
+            <div className="skill-item w-full mb-6">
+              <h5 className="text-base font-semibold text-black capitalize mb-2">Next Js</h5>
+              <div className="progress bg-gray-200 h-2 rounded relative">
+                <div className="progress-in bg-blue-500 h-full rounded" style={{ width: '86%' }}></div>
+                <div className="skill-percent text-black absolute right-0 font-bold top-[-30px]">70%</div>
+              </div>
+            </div>
+            <div className="skill-item w-full mb-6">
+              <h5 className="text-base font-semibold text-black capitalize mb-2">Express Js</h5>
+              <div className="progress bg-gray-200 h-2 rounded relative">
+                <div className="progress-in bg-blue-500 h-full rounded" style={{ width: '66%' }}></div>
+                <div className="skill-percent text-black absolute right-0 font-bold top-[-30px]">50%</div>
+              </div>
+            </div>
+            <a href="https://www.linkedin.com/posts/m-usman-89068b294_mernstack-fullstackdevelopment-webdevelopment-activity-7233801845138219008-26qm?utm_source=share&utm_medium=member_android"
+              className="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2 text-center me-2 mb-2">
+              READ MORE
+            </a>
+          </div>
+
         </div>
+
+        {/* card no 3 */}
+        <div className="w-full sm:w-1/2 lg:w-1/3 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-3">
+
+          <a href="#">
+            <img className="rounded-t-lg p-2" src="project4.png" alt="" />
+          </a>
+          <div className="p-5">
+            <a href="#">
+              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Online Store</h5>
+            </a>
+            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Created an e commerce store using HTML and CSS for a simple and responsive shopping interface.</p>
+            <div className="skill-item w-full mb-6">
+              <h5 className="text-base font-semibold text-black capitalize mb-2">HTML</h5>
+              <div className="progress bg-gray-200 h-2 rounded relative">
+                <div className="progress-in bg-blue-500 h-full rounded" style={{ width: '96%' }}></div>
+                <div className="skill-percent text-black absolute right-0 font-bold top-[-30px]">96%</div>
+              </div>
+            </div>
+            <div className="skill-item w-full mb-6">
+              <h5 className="text-base font-semibold text-black capitalize mb-2">CSS</h5>
+              <div className="progress bg-gray-200 h-2 rounded relative">
+                <div className="progress-in bg-blue-500 h-full rounded" style={{ width: '90%' }}></div>
+                <div className="skill-percent text-black absolute right-0 font-bold top-[-30px]">90%</div>
+              </div>
+            </div>
+            <div className="skill-item w-full mb-6">
+              <h5 className="text-base font-semibold text-black capitalize mb-2">JavaScript</h5>
+              <div className="progress bg-gray-200 h-2 rounded relative">
+                <div className="progress-in bg-blue-500 h-full rounded" style={{ width: '40%' }}></div>
+                <div className="skill-percent text-black absolute right-0 font-bold top-[-30px]">40%</div>
+              </div>
+            </div>
+            <a href="https://www.linkedin.com/posts/m-usman-89068b294_webdevelopment-html-css-activity-7134067380946616320-B9aT?utm_source=share&utm_medium=member_android"
+              className="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2 text-center me-2 mb-2">
+              READ MORE
+            </a>
+          </div>
+
+        </div>
+
       </div>
+
+
+
+
+
     </div>
   );
 }
