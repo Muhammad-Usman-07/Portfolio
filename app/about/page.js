@@ -5,8 +5,8 @@ const Page = () => {
     // Function to handle resume download
     const handleDownload = () => {
         const link = document.createElement('a');
-        link.href = '/usmanresume.pdf'; // Path to your resume file in the public folder
-        link.download = 'Usman_Resume.pdf'; // Filename for the downloaded file
+        link.href = '/My-Resume.pdf'; // Path to your resume file in the public folder
+        link.download = 'My-Resume.pdf'; // Filename for the downloaded file
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -62,12 +62,12 @@ const Page = () => {
                                     </div>
                                     <div className="info-item w-full sm:w-1/2 mb-4">
                                         <p className="font-semibold text-base text-white border-gray-200 pb-2">Age :
-                                            <span className="font-normal text-gray-400 ml-1">20</span>
+                                            <span className="font-normal text-gray-400 ml-1">21</span>
                                         </p>
                                     </div>
                                     <div className="info-item w-full sm:w-1/2 mb-4">
                                         <p className="font-semibold text-base text-white border-gray-200 pb-2">Website :
-                                            <span className="font-normal text-gray-400 ml-1">www.digitalusman07.com</span>
+                                            <span className="font-normal text-gray-400 ml-1">digitalusman.netlify.app</span>
                                         </p>
                                     </div>
                                     <div className="info-item w-full sm:w-1/2 mb-4">

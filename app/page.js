@@ -13,8 +13,8 @@ export default function Home() {
   // Function to handle resume download
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/usmanresume.pdf'; // Path to your resume file in the public folder
-    link.download = 'Usman_Resume.pdf'; // Filename for the downloaded file
+    link.href = '/My-Resume.pdf'; // Path to your resume file in the public folder
+    link.download = 'My-Resume.pdf'; // Filename for the downloaded file
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
