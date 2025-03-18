@@ -2,7 +2,7 @@ import React from 'react'
 
 const page = () => {
     return (
-        <section className="py-12 relative">
+        <section className="py-12 relative mt-16">
             <div className="absolute h-[36.5rem] w-full top-0 bg-gradient-to-r from-indigo-600 to-violet-600 -z-10"></div>
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="mb-12">

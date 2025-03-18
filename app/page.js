@@ -13,8 +13,8 @@ export default function Home() {
   // Function to handle resume download
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/My-Resume.pdf'; // Path to your resume file in the public folder
-    link.download = 'My-Resume.pdf'; // Filename for the downloaded file
+    link.href = '/Resume.pdf'; // Path to your resume file in the public folder
+    link.download = 'Resume.pdf'; // Filename for the downloaded file
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -25,9 +25,9 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <div className="cover w-full bg-red-50 relative">
-        <img className="w-full object-cover h-[150px] sm:h-[200px] md:h-[250px]" src="mancode.webp" alt="" />
+        <img className="w-full mt-16 object-cover h-[150px] sm:h-[200px] md:h-[250px]" src="mancode.webp" alt="" />
         <div className="absolute left-1/2 transform -translate-x-1/2 -bottom-14 sm:-bottom-16 md:-bottom-14">
-          <img className="rounded-full border-2 border-white" width={100} height={100} src="usman.png" alt="" />
+          <img className="rounded-full border-2 border-white" width={100} height={120} src="usman2.jpg" alt="" />
         </div>
       </div>
       <div className="pt-16 flex justify-center items-center flex-col gap-1 text-center">

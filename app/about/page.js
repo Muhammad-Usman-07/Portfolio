@@ -5,8 +5,8 @@ const Page = () => {
     // Function to handle resume download
     const handleDownload = () => {
         const link = document.createElement('a');
-        link.href = '/My-Resume.pdf'; // Path to your resume file in the public folder
-        link.download = 'My-Resume.pdf'; // Filename for the downloaded file
+        link.href = '/Resume.pdf'; // Path to your resume file in the public folder
+        link.download = 'Resume.pdf'; // Filename for the downloaded file
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -14,7 +14,7 @@ const Page = () => {
 
     return (
         // <!-- === About section start ===  -->
-        <section className="about section" id="about">
+        <section className="about section mt-16" id="about">
             <div className="container mx-auto px-4 pb-16">
                 <div className="row">
                     <div className="section-title pb-6">

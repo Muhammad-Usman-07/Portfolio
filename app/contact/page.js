@@ -48,7 +48,7 @@ const Page = () => {
     };
 
     return (
-        <div className=" max-w-6xl max-lg:max-w-3xl mx-auto bg-[#2e0249] rounded-lg">
+        <div className=" max-w-6xl max-lg:max-w-3xl mx-auto mt-16 bg-[#2e0249] rounded-lg">
             <div className="grid lg:grid-cols-2 items-center gap-14 sm:p-8 p-4 font-[sans-serif]">
                 <div>
                     <h1 className="text-4xl font-bold text-white">Get in Touch</h1>
